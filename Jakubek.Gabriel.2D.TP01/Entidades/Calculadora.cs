@@ -9,7 +9,13 @@ namespace Entidades
     public class Calculadora
     {
         #region Metodos
-
+        /// <summary>
+        /// Realiza la operacion a los dos valosres que se le pasan
+        /// </summary>
+        /// <param name="num1"></param>
+        /// <param name="num2"></param>
+        /// <param name="operador"></param>
+        /// <returns></returns>
         public double Operar(Numero num1, Numero num2, string operador)
         {
             string auxString = ValidarOperador(operador);
@@ -42,6 +48,11 @@ namespace Entidades
             return retorno;
         }
 
+        /// <summary>
+        /// Valida que el valor sea uno de los operadores permitidos, caso contrario retorna "+"
+        /// </summary>
+        /// <param name="operador"></param>
+        /// <returns></returns>
         private static string ValidarOperador(string operador)
         {
             string retorno = "";
