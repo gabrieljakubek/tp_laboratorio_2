@@ -87,7 +87,7 @@ namespace Entidades
                 }
                 else
                 {
-                    retorno += double.Parse(binario[i - 1].ToString()) * (double)Math.Pow(2, binario.Length - i);
+                    retorno += int.Parse(binario[i - 1].ToString()) * (double)Math.Pow(2, binario.Length - i);
 
                 }
             }
@@ -103,14 +103,39 @@ namespace Entidades
             
         }
 
+        /// <summary>
+        /// Convierte de decimal a binario recibiendo un double
+        /// </summary>
+        /// <param name="numero">Numero a convertir en binario</param>
+        /// <returns>Retorna el binario correspondiente, caso contrario "Valor invalido"</returns>
         public string DecimalBinario(double numero)
         {
             return DecimalBinario(numero.ToString());
         }
 
+        /// <summary>
+        /// Convierte de decimal a binario recibiendo un string
+        /// </summary>
+        /// <param name="numero">Numero a convertir en binario</param>
+        /// <returns>Retorna el binario correspondiente, caso contrario "Valor invalido"</returns>
         public string DecimalBinario(string numero)
         {
-
+            string retorno = "";
+            int entero;
+            if(int.TryParse(numero,out int valor))
+            {
+                entero = Math.Abs(valor);
+                do
+                {
+                    retorno = (entero % 2).ToString() + retorno;
+                    entero /= 2;
+                } while (valor>0);
+            }
+            else
+            {
+                retorno = "Valor invalido";
+            }
+            return retorno;
         }
         #endregion
 
@@ -156,7 +181,12 @@ namespace Entidades
         /// <returns>Retorna el resultado de la division</returns>
         public static double operator /(Numero n1, Numero n2)
         {
-            return n1.numero / n2.numero;
+            double retorno = double.MinValue;
+            if(n2.numero != 0)
+            {
+                retorno = n1.numero / n2.numero;
+            }
+            return retorno;
         }
         #endregion
     }
