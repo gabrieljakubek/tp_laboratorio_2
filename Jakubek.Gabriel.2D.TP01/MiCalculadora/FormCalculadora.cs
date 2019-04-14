@@ -69,7 +69,7 @@ namespace MiCalculadora
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
             Numero numero = new Numero();
-            if (lblResultado.Text != "Valor invalido" && lblResultado.Text[0] == '0')
+            if (lblResultado.Text != "Valor invalido" && lblResultado.Text != "" && lblResultado.Text[0] == '0')
             {
                 lblResultado.Text = numero.BinarioDecimal(lblResultado.Text);
             }

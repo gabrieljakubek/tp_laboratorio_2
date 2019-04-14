@@ -128,7 +128,7 @@ namespace Entidades
         public string DecimalBinario(string numero)
         {
             string retorno = "";
-            if (double.TryParse(numero, out double valor))
+            if (double.TryParse(numero, out double valor) && valor >=0)
             {
                 retorno = DecimalBinario(valor);
             }
