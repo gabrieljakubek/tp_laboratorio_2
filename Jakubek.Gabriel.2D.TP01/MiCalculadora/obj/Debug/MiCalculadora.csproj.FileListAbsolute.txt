@@ -1,0 +1,13 @@
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP01\MiCalculadora\bin\Debug\MiCalculadora.exe.config
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP01\MiCalculadora\bin\Debug\MiCalculadora.exe
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP01\MiCalculadora\bin\Debug\MiCalculadora.pdb
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP01\MiCalculadora\bin\Debug\Entidades.dll
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP01\MiCalculadora\bin\Debug\Entidades.pdb
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP01\MiCalculadora\obj\Debug\MiCalculadora.csprojAssemblyReference.cache
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP01\MiCalculadora\obj\Debug\MiCalculadora.FormCalculadora.resources
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP01\MiCalculadora\obj\Debug\MiCalculadora.Properties.Resources.resources
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP01\MiCalculadora\obj\Debug\MiCalculadora.csproj.GenerateResource.cache
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP01\MiCalculadora\obj\Debug\MiCalculadora.csproj.CoreCompileInputs.cache
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP01\MiCalculadora\obj\Debug\MiCalculadora.csproj.CopyComplete
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP01\MiCalculadora\obj\Debug\MiCalculadora.exe
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP01\MiCalculadora\obj\Debug\MiCalculadora.pdb

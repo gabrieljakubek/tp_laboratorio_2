@@ -20,7 +20,7 @@ namespace Entidades
         {
             string auxString = ValidarOperador(operador);
             double retorno = 0;
-            switch (operador)
+            switch (auxString)
             {
                 case "+":
                     {

@@ -29,7 +29,7 @@ namespace Entidades
         /// <summary>
         /// Constructor por defecto
         /// </summary>
-        Numero ():this (Convert.ToString(0))
+        public Numero() : this(Convert.ToString(0))
         {
         }
 
@@ -37,7 +37,7 @@ namespace Entidades
         /// Constructor que recibe como parametro un double
         /// </summary>
         /// <param name="numero">Valor que se desea asignar al numero</param>
-        Numero (double numero):this(numero.ToString())
+        public Numero(double numero) : this(numero.ToString())
         {
         }
 
@@ -45,7 +45,7 @@ namespace Entidades
         /// Constructor que recive por parametro un string
         /// </summary>
         /// <param name="strNumero">Valor que se desea asignar al numero</param>
-        Numero(string strNumero)
+        public Numero(string strNumero)
         {
             this.SetNumero = strNumero;
         }
@@ -74,24 +74,22 @@ namespace Entidades
         /// </summary>
         /// <param name="binario">Binario a convertir.</param>
         /// <returns>Valor entero resultado de la conversiónm caso contrario retornara "Valor invalido".</returns>
-        public string BinarioEntero(string binario)
+        public string BinarioDecimal(string binario)
         {
             double retorno = 0;
             bool flag = false;
-            for (int i = 1; i <= binario.Length; i++)
+            for (int i = 1; i <=binario.Length; i++)
             {
-                if (binario[i] != 0 || binario[i] != 1)
+                if (binario[i-1] == '0' || binario[i-1] == '1')
                 {
-                    flag = true;
-                    break;
+                    retorno += int.Parse(binario[i - 1].ToString()) * (double)Math.Pow(2, binario.Length - i);
                 }
                 else
                 {
-                    retorno += int.Parse(binario[i - 1].ToString()) * (double)Math.Pow(2, binario.Length - i);
-
+                    flag = true;
                 }
-            }
 
+            }
             if (flag)
             {
                 return "Valor invalido";
@@ -100,7 +98,7 @@ namespace Entidades
             {
                 return retorno.ToString();
             }
-            
+
         }
 
         /// <summary>
@@ -110,7 +108,15 @@ namespace Entidades
         /// <returns>Retorna el binario correspondiente, caso contrario "Valor invalido"</returns>
         public string DecimalBinario(double numero)
         {
-            return DecimalBinario(numero.ToString());
+            int entero;
+            string retorno = "";
+            entero = Math.Abs((int)numero);
+            do
+            {
+                retorno = (entero % 2).ToString() + retorno;
+                entero /= 2;
+            } while (entero >0);
+            return retorno; ;
         }
 
         /// <summary>
@@ -121,15 +127,9 @@ namespace Entidades
         public string DecimalBinario(string numero)
         {
             string retorno = "";
-            int entero;
-            if(int.TryParse(numero,out int valor))
+            if (double.TryParse(numero, out double valor))
             {
-                entero = Math.Abs(valor);
-                do
-                {
-                    retorno = (entero % 2).ToString() + retorno;
-                    entero /= 2;
-                } while (valor>0);
+                retorno = DecimalBinario(valor);
             }
             else
             {
@@ -168,7 +168,7 @@ namespace Entidades
         /// <param name="n1"></param>
         /// <param name="n2"></param>
         /// <returns>Retorna el resultado de la multiplicacion</returns>
-        public static double operator *(Numero n1,Numero n2)
+        public static double operator *(Numero n1, Numero n2)
         {
             return n1.numero * n2.numero;
         }
@@ -182,7 +182,7 @@ namespace Entidades
         public static double operator /(Numero n1, Numero n2)
         {
             double retorno = double.MinValue;
-            if(n2.numero != 0)
+            if (n2.numero != 0)
             {
                 retorno = n1.numero / n2.numero;
             }
