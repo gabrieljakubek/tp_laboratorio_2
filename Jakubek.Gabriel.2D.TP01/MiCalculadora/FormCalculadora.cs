@@ -13,8 +13,6 @@ namespace MiCalculadora
 {
     public partial class FormCalculadora : Form
     {
-        static bool chequeoConvercion;
-
         public FormCalculadora()
         {
             InitializeComponent();
@@ -46,14 +44,12 @@ namespace MiCalculadora
                 {
                     item.Text = "";
                 }
-                chequeoConvercion = true;
             }
         }
 
         private void btnOperar_Click(object sender, EventArgs e)
         {
             lblResultado.Text = Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text).ToString();
-            chequeoConvercion = false;
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -64,20 +60,18 @@ namespace MiCalculadora
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
             Numero numero = new Numero();
-            if (chequeoConvercion == false && lblResultado.Text != "Valor invalido" && lblResultado.Text != "")
+            if (lblResultado.Text != "Valor invalido" && lblResultado.Text != "" && lblResultado.Text[0] != '0')
             {
                 lblResultado.Text = numero.DecimalBinario(lblResultado.Text);
-                chequeoConvercion = true;
             }
         }
 
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
             Numero numero = new Numero();
-            if (chequeoConvercion ==true&& lblResultado.Text != "Valor invalido")
+            if (lblResultado.Text != "Valor invalido" && lblResultado.Text[0] == '0')
             {
                 lblResultado.Text = numero.BinarioDecimal(lblResultado.Text);
-                chequeoConvercion = false;
             }
         }
 

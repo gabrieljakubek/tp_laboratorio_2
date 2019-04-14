@@ -116,6 +116,7 @@ namespace Entidades
                 retorno = (entero % 2).ToString() + retorno;
                 entero /= 2;
             } while (entero >0);
+            retorno = 0 + retorno;
             return retorno; ;
         }
 
