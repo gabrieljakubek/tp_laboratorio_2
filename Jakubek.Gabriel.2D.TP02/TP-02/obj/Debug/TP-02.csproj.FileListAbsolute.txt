@@ -1,0 +1,40 @@
+D:\Federico\VB .Net\Visual C#\utn\TP-02\TP-02\bin\Debug\TP-02.exe.config
+D:\Federico\VB .Net\Visual C#\utn\TP-02\TP-02\bin\Debug\TP-02.exe
+D:\Federico\VB .Net\Visual C#\utn\TP-02\TP-02\bin\Debug\TP-02.pdb
+D:\Federico\VB .Net\Visual C#\utn\TP-02\TP-02\bin\Debug\Entidades.dll
+D:\Federico\VB .Net\Visual C#\utn\TP-02\TP-02\bin\Debug\Entidades.pdb
+D:\Federico\VB .Net\Visual C#\utn\TP-02\TP-02\obj\Debug\TP-02.csprojResolveAssemblyReference.cache
+D:\Federico\VB .Net\Visual C#\utn\TP-02\TP-02\obj\Debug\TP-02.exe
+D:\Federico\VB .Net\Visual C#\utn\TP-02\TP-02\obj\Debug\TP-02.pdb
+D:\VisualStudio\Federico Dávila\TP-02\TP-02\bin\Debug\TP-02.exe.config
+D:\VisualStudio\Federico Dávila\TP-02\TP-02\obj\Debug\TP-02.exe
+D:\VisualStudio\Federico Dávila\TP-02\TP-02\obj\Debug\TP-02.pdb
+D:\VisualStudio\Federico Dávila\TP-02\TP-02\obj\Debug\TP-02.csprojResolveAssemblyReference.cache
+D:\VisualStudio\Federico Dávila\TP-02\TP-02\bin\Debug\TP-02.exe
+D:\VisualStudio\Federico Dávila\TP-02\TP-02\bin\Debug\TP-02.pdb
+D:\VisualStudio\Federico Dávila\TP-02\TP-02\bin\Debug\Entidades.dll
+D:\VisualStudio\Federico Dávila\TP-02\TP-02\bin\Debug\Entidades.pdb
+D:\Federico\VB .Net\Visual C#\utn\TPs\2018\TP-02\TP-02\bin\Debug\TP-02.exe.config
+D:\Federico\VB .Net\Visual C#\utn\TPs\2018\TP-02\TP-02\obj\Debug\TP-02.exe
+D:\Federico\VB .Net\Visual C#\utn\TPs\2018\TP-02\TP-02\obj\Debug\TP-02.pdb
+D:\Federico\VB .Net\Visual C#\utn\TPs\2018\TP-02\TP-02\obj\Debug\TP-02.csprojResolveAssemblyReference.cache
+F:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.csprojAssemblyReference.cache
+F:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.csproj.CoreCompileInputs.cache
+F:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.exe
+F:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\bin\Debug\TP-02.exe.config
+F:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\bin\Debug\TP-02.exe
+F:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\bin\Debug\TP-02.pdb
+F:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\bin\Debug\Entidades.dll
+F:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\bin\Debug\Entidades.pdb
+F:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.csproj.CopyComplete
+F:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.pdb
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\bin\Debug\TP-02.exe.config
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\bin\Debug\TP-02.exe
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\bin\Debug\TP-02.pdb
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\bin\Debug\Entidades.dll
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\bin\Debug\Entidades.pdb
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.csprojAssemblyReference.cache
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.csproj.CoreCompileInputs.cache
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.csproj.CopyComplete
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.exe
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.pdb

@@ -50,34 +50,42 @@ namespace MiCalculadora
         private void btnOperar_Click(object sender, EventArgs e)
         {
             lblResultado.Text = Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text).ToString();
+            btnConvertirADecimal.Enabled = false;
+            btnConvertirABinario.Enabled = true;
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
+            btnConvertirABinario.Enabled = false;
+            btnConvertirADecimal.Enabled = false;
         }
 
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
             Numero numero = new Numero();
-            if (lblResultado.Text != "Valor invalido" && lblResultado.Text != "" && lblResultado.Text[0] != '0')
-            {
-                lblResultado.Text = numero.DecimalBinario(lblResultado.Text);
-            }
+            lblResultado.Text = numero.DecimalBinario(lblResultado.Text);
+            btnConvertirABinario.Enabled = false;
+            btnConvertirADecimal.Enabled = true;
         }
 
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
             Numero numero = new Numero();
-            if (lblResultado.Text != "Valor invalido" && lblResultado.Text != "" && lblResultado.Text[0] == '0')
-            {
-                lblResultado.Text = numero.BinarioDecimal(lblResultado.Text);
-            }
+            lblResultado.Text = numero.BinarioDecimal(lblResultado.Text);
+            btnConvertirADecimal.Enabled = false;
+            btnConvertirABinario.Enabled = true;
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FormCalculadora_Load(object sender, EventArgs e)
+        {
+            btnConvertirABinario.Enabled = false;
+            btnConvertirADecimal.Enabled = false;
         }
     }
 }
