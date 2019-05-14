@@ -28,13 +28,13 @@ F:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabrie
 F:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\bin\Debug\Entidades.pdb
 F:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.csproj.CopyComplete
 F:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.pdb
-E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\bin\Debug\TP-02.exe.config
-E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\bin\Debug\TP-02.exe
-E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\bin\Debug\TP-02.pdb
-E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\bin\Debug\Entidades.dll
-E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\bin\Debug\Entidades.pdb
-E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.csprojAssemblyReference.cache
-E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.csproj.CoreCompileInputs.cache
-E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.csproj.CopyComplete
-E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.exe
-E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.pdb
+E:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\bin\Debug\TP-02.exe.config
+E:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\bin\Debug\TP-02.exe
+E:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\bin\Debug\TP-02.pdb
+E:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\bin\Debug\Entidades.dll
+E:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\bin\Debug\Entidades.pdb
+E:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.csprojAssemblyReference.cache
+E:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.csproj.CoreCompileInputs.cache
+E:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.csproj.CopyComplete
+E:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.exe
+E:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\TP-02\obj\Debug\TP-02.pdb

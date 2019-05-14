@@ -28,7 +28,7 @@ namespace Entidades_2018
         protected abstract short CantidadCalorias { get; }
         #endregion
 
-        #region
+        #region Constructores
         /// <summary>
         /// Constructor del objeto Producto
         /// </summary>
@@ -67,7 +67,6 @@ namespace Entidades_2018
             return sb.ToString();
         }
         #endregion
-
 
         #region Sobrecarga de operadores
         /// <summary>

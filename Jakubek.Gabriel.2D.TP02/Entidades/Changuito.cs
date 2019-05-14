@@ -9,7 +9,7 @@ namespace Entidades_2018
     /// <summary>
     /// No podrá tener clases heredadas.
     /// </summary>
-    public class Changuito
+    public sealed class Changuito
     {
         #region Enumeradores
         public enum ETipo
@@ -22,7 +22,6 @@ namespace Entidades_2018
         List<Producto> productos;
         int espacioDisponible;
         #endregion
-
 
         #region "Constructores"
         /// <summary>
@@ -50,7 +49,7 @@ namespace Entidades_2018
         /// <returns></returns>
         public override string ToString()
         {
-            return this.Mostrar(this, ETipo.Todos);
+            return Changuito.Mostrar(this, ETipo.Todos);
         }
         #endregion
 
@@ -62,7 +61,7 @@ namespace Entidades_2018
         /// <param name="c">Elemento a exponer</param>
         /// <param name="ETipo">Tipos de ítems de la lista a mostrar</param>
         /// <returns></returns>
-        public string Mostrar(Changuito c, ETipo tipo)
+        public static string Mostrar(Changuito c, ETipo tipo)
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendFormat("Tenemos {0} lugares ocupados de un total de {1} disponibles", c.productos.Count, c.espacioDisponible);
@@ -107,14 +106,10 @@ namespace Entidades_2018
         /// <returns></returns>
         public static Changuito operator +(Changuito c, Producto p)
         {
-            //if (c != p && c.productos.Count() < c.espacioDisponible)
-            //{
-            //    c.productos.Add(p);
-            //}
             bool chequeo = false;
             if (c.productos.Count() == 0)
             {
-                c.productos.Add(p);
+                chequeo=true;
             }
             else
             {
@@ -146,51 +141,16 @@ namespace Entidades_2018
         /// <returns></returns>
         public static Changuito operator -(Changuito c, Producto p)
         {
-            //if (c == p)
-            //{
-            //    c.productos.Remove(p);
-            //}
             foreach (Producto v in c.productos)
             {
                 if (v == p)
                 {
-                    c.productos.Remove(p);
+                    c.productos.Remove(v);
                     break;
                 }
             }
             return c;
         }
-
-        ///// <summary>
-        ///// Comprobara si un objeto está insertado en la lista
-        ///// </summary>
-        ///// <param name="c">Objeto donde se comprobara</param>
-        ///// <param name="p">Objeto a comprobar</param>
-        ///// <returns></returns>
-        //public static bool operator ==(Changuito c, Producto p)
-        //{
-        //    bool retorno = false;
-        //    foreach (Producto producto in c.productos)
-        //    {
-        //        if (producto == p)
-        //        {
-        //            retorno = true;
-        //            break;
-        //        }
-        //    }
-        //    return retorno;
-        //}
-
-        ///// <summary>
-        ///// Comprobara si un objeto no está insertado en la lista
-        ///// </summary>
-        ///// <param name="c"></param>
-        ///// <param name="p"></param>
-        ///// <returns></returns>
-        //public static bool operator !=(Changuito c, Producto p)
-        //{
-        //    return !(c == p);
-        //}
         #endregion
     }
 }
