@@ -90,6 +90,16 @@ namespace Entidades_2018
         {
             return !(v1 == v2);
         }
+
+        /// <summary>
+        /// Comprueba que dos productos sean iguales
+        /// </summary>
+        /// <param name="obj">El producto a comparar</param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            return this == (Producto) obj;
+        }
         #endregion
     }
 }

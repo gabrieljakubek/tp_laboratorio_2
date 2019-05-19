@@ -23,3 +23,9 @@ E:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabrie
 E:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 E:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\Entidades\obj\Debug\Entidades.dll
 E:\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1C 2019\TPs\Jakubek.Gabriel.2D.TP02\Entidades\obj\Debug\Entidades.pdb
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\Entidades\bin\Debug\Entidades.dll
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\Entidades\bin\Debug\Entidades.pdb
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\Entidades\obj\Debug\Entidades.dll
+E:\Carrera Programacion Superior\Segundo Cuatrimestre\Programacion y Laboratorio 2D 1 cuatri 2019\TPs\Jakubek.Gabriel.2D.TP02\Entidades\obj\Debug\Entidades.pdb
