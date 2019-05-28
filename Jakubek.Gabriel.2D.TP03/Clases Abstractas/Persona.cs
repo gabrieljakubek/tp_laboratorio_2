@@ -43,10 +43,12 @@ namespace Clases_Abstractas
                 }
                 catch (DniInvalidoException ex)
                 {
-
+                    throw;
                 }
                 catch (NacionalidadInvalidaException ex)
-                { }
+                {
+                    throw;
+                }
                 catch (Exception ex)
                 {
 
@@ -89,10 +91,12 @@ namespace Clases_Abstractas
                 }
                 catch (DniInvalidoException ex)
                 {
-
+                    throw;
                 }
                 catch (NacionalidadInvalidaException ex)
-                { }
+                {
+                    throw;
+                }
                 catch (Exception ex)
                 {
 
@@ -136,7 +140,8 @@ namespace Clases_Abstractas
                 }
                 else
                 {
-                    if ((nacionalidad != ENacionalidad.Argentino && resultado >= 1 && resultado <= 89999999) || (nacionalidad != ENacionalidad.Extrangero && resultado >= 90000000 && resultado <= 99999999))
+                    if ((nacionalidad != ENacionalidad.Argentino && resultado >= 1 && resultado <= 89999999) ||
+                        (nacionalidad != ENacionalidad.Extrangero && resultado >= 90000000 && resultado <= 99999999))
                     {
                         throw new NacionalidadInvalidaException("Nacionalidad invalida");
                     }
@@ -185,6 +190,7 @@ namespace Clases_Abstractas
             return sb.ToString();
         }
         #endregion
+
         public enum ENacionalidad
         {
             Argentino,

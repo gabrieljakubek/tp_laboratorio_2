@@ -12,9 +12,9 @@ namespace Excepciones
         private string mensajeBase;
         #endregion
 
-        public DniInvalidoException() : this("", null)
+        public DniInvalidoException() : this("DNI Invalido", null)
         { }
-        public DniInvalidoException(Exception e) : this("", e)
+        public DniInvalidoException(Exception e) : this("DNI invalido", e)
         { }
         public DniInvalidoException(string mensaje) : this(mensaje, null)
         { }
