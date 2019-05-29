@@ -37,23 +37,7 @@ namespace Clases_Abstractas
             }
             set
             {
-                try
-                {
-                    this.dni = ValidarDni(this.nacionalidad, value);
-                }
-                catch (DniInvalidoException ex)
-                {
-                    throw;
-                }
-                catch (NacionalidadInvalidaException ex)
-                {
-                    throw;
-                }
-                catch (Exception ex)
-                {
-
-                    throw;
-                }; 
+                this.dni = ValidarDni(this.nacionalidad, value);
             }
         }
 
@@ -85,33 +69,19 @@ namespace Clases_Abstractas
         {
             set
             {
-                try
-                {
-                    this.dni = ValidarDni(this.nacionalidad, value);
-                }
-                catch (DniInvalidoException ex)
-                {
-                    throw;
-                }
-                catch (NacionalidadInvalidaException ex)
-                {
-                    throw;
-                }
-                catch (Exception ex)
-                {
-
-                    throw;
-                };
+                this.dni = ValidarDni(this.nacionalidad, value);
             }
         }
         #endregion
 
         #region Constructores
-        public Persona() : this("", "", "", ENacionalidad.Argentino)
+        public Persona()
         { }
-        public Persona(string nombre, string apellido, ENacionalidad nacionalidad) : this(nombre, apellido, "", nacionalidad)
+        public Persona(string nombre, string apellido, ENacionalidad nacionalidad) 
+            : this(nombre, apellido, 0, nacionalidad)
         { }
-        public Persona(string nombre, string apellido, int dni, ENacionalidad nacionalidad) : this(nombre, apellido, dni.ToString(), nacionalidad)
+        public Persona(string nombre, string apellido, int dni, ENacionalidad nacionalidad) 
+            : this(nombre, apellido, dni.ToString(), nacionalidad)
         { }
         public Persona(string nombre, string apellido, string dni, ENacionalidad nacionalidad)
         {
@@ -125,31 +95,36 @@ namespace Clases_Abstractas
         #region Metodos
         private int ValidarDni(ENacionalidad nacionalidad, int dato)
         {
-            return ValidarDni(nacionalidad, dato.ToString());
+            int retorno = 0;
+            string mensaje = "DNI invalido";
+            if (dato >= 1 && dato <= 99999999)
+            {
+                    if ((nacionalidad != ENacionalidad.Argentino && dato >= 1 && dato <= 89999999) ||
+                        (nacionalidad != ENacionalidad.Extrangero && dato >= 90000000 && dato <= 99999999))
+                    {
+                        throw new NacionalidadInvalidaException("Nacionalidad invalida");
+                    }
+                    else
+                    {
+                        retorno = dato;
+                    }
+            }
+            else
+            {
+                throw new DniInvalidoException(mensaje);
+            }
+
+            return retorno;
         }
 
         private int ValidarDni(ENacionalidad nacionalidad, string dato)
         {
             int retorno = 0;
             string mensaje = "DNI invalido";
-            if (dato.Count() < 9)
+            if (!int.TryParse(dato, out int resultado) && dato.Count() < 9)
             {
-                if (!int.TryParse(dato, out int resultado))
-                {
-                    throw new DniInvalidoException(mensaje);
-                }
-                else
-                {
-                    if ((nacionalidad != ENacionalidad.Argentino && resultado >= 1 && resultado <= 89999999) ||
-                        (nacionalidad != ENacionalidad.Extrangero && resultado >= 90000000 && resultado <= 99999999))
-                    {
-                        throw new NacionalidadInvalidaException("Nacionalidad invalida");
-                    }
-                    else
-                    {
-                        retorno = resultado;
-                    }
-                }
+
+                retorno = ValidarDni(nacionalidad, resultado);
             }
             else
             {
