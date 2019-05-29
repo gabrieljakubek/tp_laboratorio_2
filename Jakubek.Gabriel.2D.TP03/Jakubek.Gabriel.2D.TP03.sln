@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main", "Main\Main.csproj", "{2F0D1B01-4C22-4BE9-87B3-02AC12E85886}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clases Abstractas", "Clases Abstractas\Clases Abstractas.csproj", "{015B8D18-B34C-45A8-AE74-FEB2476AE60E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntidadesAbstractas", "Clases Abstractas\EntidadesAbstractas.csproj", "{015B8D18-B34C-45A8-AE74-FEB2476AE60E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archivos", "Archivos\Archivos.csproj", "{A622FBC4-2DE9-42B7-892E-75442FD7FFB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clases Instanciables", "Clases Instanciables\Clases Instanciables.csproj", "{9E6C851C-79FF-40DD-B8AF-BC6DA271AE8E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntidadesInstanciables", "Clases Instanciables\EntidadesInstanciables.csproj", "{9E6C851C-79FF-40DD-B8AF-BC6DA271AE8E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excepciones", "Excepciones\Excepciones.csproj", "{032535F0-F662-463F-8B0D-0C619815A225}"
 EndProject

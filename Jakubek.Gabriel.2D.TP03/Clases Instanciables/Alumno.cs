@@ -1,12 +1,8 @@
-﻿using Clases_Abstractas;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using EntidadesAbstractas;
 using System.Text;
-using System.Threading.Tasks;
-using static Clases_Instanciables.Universidad;
+using static EntidadesInstanciables.Universidad;
 
-namespace Clases_Instanciables
+namespace EntidadesInstanciables
 {
     public sealed class Alumno : Universitario
     {
@@ -16,12 +12,34 @@ namespace Clases_Instanciables
         #endregion
 
         #region Constructores
+        /// <summary>
+        /// Constructor por default
+        /// </summary>
         public Alumno()
         { }
 
+        /// <summary>
+        /// Constructor que recibe todos los parametros menos el estado de cuenta
+        /// </summary>
+        /// <param name="id">Legajo</param>
+        /// <param name="nombre">Nombre del alumno</param>
+        /// <param name="apellido">Apellido del alumno</param>
+        /// <param name="dni">DNI del alumno</param>
+        /// <param name="nacionalidad">Nacionalidad</param>
+        /// <param name="claseQueToma">La clase que toma</param>
         public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, EClases claseQueToma):this(id,nombre,apellido,dni,nacionalidad,claseQueToma,0)
         { }
 
+        /// <summary>
+        /// Constructor que recibe todos los parametros
+        /// </summary>
+        /// <param name="id">Legajo</param>
+        /// <param name="nombre">Nombre del alumno</param>
+        /// <param name="apellido">Apellido del alumno</param>
+        /// <param name="dni">DNI del alumno</param>
+        /// <param name="nacionalidad">Nacionalidad</param>
+        /// <param name="claseQueToma">La clase que toma</param>
+        /// <param name="estadoCuenta">El estado de de la cuenta del alumno</param>
         public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, EClases claseQueToma, EEstadoCuenta estadoCuenta):base(id,nombre,apellido,dni,nacionalidad)
         {
             this.claseQueToma = claseQueToma;
@@ -30,6 +48,10 @@ namespace Clases_Instanciables
         #endregion
 
         #region Metodos
+        /// <summary>
+        /// Metodo que retorna toda la informacion del alumno
+        /// </summary>
+        /// <returns></returns>
         protected override string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
@@ -38,6 +60,11 @@ namespace Clases_Instanciables
             sb.AppendLine("Estado de cuenta: " + estadoCuenta);
             return base.MostrarDatos();
         }
+
+        /// <summary>
+        /// Metodo que retorna que clase está tomando
+        /// </summary>
+        /// <returns></returns>
         protected override string ParticiparEnClase()
         {
             StringBuilder sb = new StringBuilder("TOMA CLASE DE " + this.claseQueToma);
@@ -46,6 +73,10 @@ namespace Clases_Instanciables
         #endregion
 
         #region Sobrecargas
+        /// <summary>
+        /// Metodo que retorna toda la informacion del alumno
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return this.MostrarDatos();
@@ -53,6 +84,12 @@ namespace Clases_Instanciables
         #endregion
 
         #region Operadores
+        /// <summary>
+        /// Comprueba qué un alumno cura una clase en especifico
+        /// </summary>
+        /// <param name="a">Alumno del que se desea saber cual clase cursa</param>
+        /// <param name="clase">Clase en la que se desea saber si cursa el alumno</param>
+        /// <returns></returns>
         public static bool operator ==(Alumno a, EClases clase)
         {
             bool retorno = false;
@@ -63,6 +100,12 @@ namespace Clases_Instanciables
             return retorno;
         }
 
+        /// <summary>
+        /// Comprueba qué un alumno no cura una clase en especifico
+        /// </summary>
+        /// <param name="a">Alumno del que se desea saber cual clase cursa</param>
+        /// <param name="clase">Clase en la que se desea saber si cursa el alumno</param>
+        /// <returns></returns>
         public static bool operator !=(Alumno a, EClases clase)
         {
             bool retorno = false;
@@ -73,6 +116,7 @@ namespace Clases_Instanciables
             return retorno;
         }
         #endregion
+
         public enum EEstadoCuenta
         {
             AlDia,

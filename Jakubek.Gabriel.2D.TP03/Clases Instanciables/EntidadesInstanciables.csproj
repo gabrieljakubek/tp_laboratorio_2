@@ -7,8 +7,8 @@
     <ProjectGuid>{9E6C851C-79FF-40DD-B8AF-BC6DA271AE8E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Clases_Instanciables</RootNamespace>
-    <AssemblyName>Clases Instanciables</AssemblyName>
+    <RootNamespace>EntidadesInstanciables</RootNamespace>
+    <AssemblyName>EntidadesInstanciables</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -42,14 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alumno.cs" />
+    <Compile Include="Jornada.cs" />
     <Compile Include="Profesor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Universidad.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Clases Abstractas\Clases Abstractas.csproj">
+    <ProjectReference Include="..\Clases Abstractas\EntidadesAbstractas.csproj">
       <Project>{015B8D18-B34C-45A8-AE74-FEB2476AE60E}</Project>
-      <Name>Clases Abstractas</Name>
+      <Name>EntidadesAbstractas</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

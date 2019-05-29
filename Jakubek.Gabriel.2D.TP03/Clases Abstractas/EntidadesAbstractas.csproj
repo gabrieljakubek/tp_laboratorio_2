@@ -7,8 +7,8 @@
     <ProjectGuid>{015B8D18-B34C-45A8-AE74-FEB2476AE60E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Clases_Abstractas</RootNamespace>
-    <AssemblyName>Clases Abstractas</AssemblyName>
+    <RootNamespace>EntidadesAbstractas</RootNamespace>
+    <AssemblyName>EntidadesAbstractas</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
