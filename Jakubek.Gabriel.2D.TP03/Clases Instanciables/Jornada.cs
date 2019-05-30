@@ -16,6 +16,10 @@ namespace EntidadesInstanciables
         #endregion
 
         #region Propiedades
+        /// <summary>
+        /// Propiedad de los alumnos de la jornada (Se le asigna la listade alumnos siempre 
+        /// y cueando todos los alumnos asistan a la misma clase)
+        /// </summary>
         public List<Alumno> Alumnos
         {
             get
@@ -24,10 +28,20 @@ namespace EntidadesInstanciables
             }
             set
             {
-                ;
+                foreach (Alumno alumno in value)
+                {
+                    if(alumno == this.clase)
+                    {
+                        this.alumnos.Add(alumno);
+                        break;
+                    }
+                }
             }
         }
 
+        /// <summary>
+        /// Propiedad de la clase de la jornada
+        /// </summary>
         public EClases Clases
         {
             get
@@ -36,10 +50,13 @@ namespace EntidadesInstanciables
             }
             set
             {
-                ;
+                this.clase = value;
             }
         }
 
+        /// <summary>
+        /// Propiedad del profesor de la jornada ( se le asigna el profesor siempre y cuando imparta esa misma clase)
+        /// </summary>
         public Profesor Instructor
         {
             get
@@ -48,9 +65,28 @@ namespace EntidadesInstanciables
             }
             set
             {
-                ;
+                if (value == this.clase)
+                {
+                    this.profesor = value;
+                }
+                
             }
         }
         #endregion
+
+        #region Constructores
+        public Jornada()
+        {
+            this.alumnos = new List<Alumno>();
+        }
+
+        public Jornada(EClases clase, Profesor instructor)
+        {
+            this.Clases = clase;
+            this.Instructor = instructor;
+        }
+        #endregion
+
+
     }
 }
