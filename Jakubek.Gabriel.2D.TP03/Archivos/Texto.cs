@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Excepciones;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,11 +15,19 @@ namespace Archivos
         {
             bool retorno = false;
             XmlSerializer serializer = new XmlSerializer(typeof(string));
-            using (XmlTextWriter writer = new XmlTextWriter(archivo, Encoding.UTF8))
+            try
             {
-                serializer.Serialize(writer, datos);
-                retorno = true;
+                using (XmlTextWriter writer = new XmlTextWriter(archivo, Encoding.UTF8))
+                {
+                    serializer.Serialize(writer, datos);
+                    retorno = true;
+                }
             }
+            catch (Exception ex)
+            {
+                throw new ArchivosException(ex);
+            }
+
             return retorno;
         }
 
@@ -26,11 +35,19 @@ namespace Archivos
         {
             bool retorno = false;
             XmlSerializer serializer = new XmlSerializer(typeof(string));
-            using (XmlTextReader reader = new XmlTextReader(archivo))
+            try
             {
-                dato = (string)serializer.Deserialize(reader);
-                retorno = true;
+                using (XmlTextReader reader = new XmlTextReader(archivo))
+                {
+                    dato = (string)serializer.Deserialize(reader);
+                    retorno = true;
+                }
             }
+            catch (Exception ex)
+            {
+                throw new ArchivosException(ex);
+            }
+
             return retorno;
         }
     }

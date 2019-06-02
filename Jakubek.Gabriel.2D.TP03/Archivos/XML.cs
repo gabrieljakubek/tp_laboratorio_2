@@ -16,11 +16,19 @@ namespace Archivos
         {
             bool retorno = false;
             BinaryFormatter binary = new BinaryFormatter();
-            using (FileStream stream = new FileStream(archivo, FileMode.Create))
+            try
             {
-                binary.Serialize(stream, datos);
-                retorno = true;
+                using (FileStream stream = new FileStream(archivo, FileMode.Create))
+                {
+                    binary.Serialize(stream, datos);
+                    retorno = true;
+                }
             }
+            catch (Exception ex)
+            {
+                throw new ArchivosException(ex);
+            }
+
             return retorno;
         }
 
@@ -28,11 +36,19 @@ namespace Archivos
         {
             bool retorno = false;
             BinaryFormatter binary = new BinaryFormatter();
-            using (FileStream stream = new FileStream(archivo, FileMode.Open))
+            try
             {
-                dato = (T)binary.Deserialize(stream);
-                retorno = true;
+                using (FileStream stream = new FileStream(archivo, FileMode.Open))
+                {
+                    dato = (T)binary.Deserialize(stream);
+                    retorno = true;
+                }
             }
+            catch (Exception ex)
+            { 
+                throw new ArchivosException(ex);
+            }
+
             return retorno;
         }
     }

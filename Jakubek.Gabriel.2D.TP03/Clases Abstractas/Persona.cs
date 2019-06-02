@@ -99,33 +99,34 @@ namespace EntidadesAbstractas
         /// <param name="nombre">Nombre de la persona</param>
         /// <param name="apellido">Apellido de la persona</param>
         /// <param name="nacionalidad">Nacionalidad de la persona</param>
-        public Persona(string nombre, string apellido, ENacionalidad nacionalidad) 
-            : this(nombre, apellido, 0, nacionalidad)
-        { }
-
-        /// <summary>
-        /// Cosntructor que recibe todos los ddatos de la persona
-        /// </summary>
-        /// <param name="nombre">Nombre de la persona</param>
-        /// <param name="apellido">Apellido de la persona</param>
-        /// <param name="dni">DNI de la persona</param>
-        /// <param name="nacionalidad">Nacionalidad de la persona</param>
-        public Persona(string nombre, string apellido, int dni, ENacionalidad nacionalidad) 
-            : this(nombre, apellido, dni.ToString(), nacionalidad)
-        { }
-
-        /// <summary>
-        /// Cosntructor que recibe todos los ddatos de la persona
-        /// </summary>
-        /// <param name="nombre">Nombre de la persona</param>
-        /// <param name="apellido">Apellido de la persona</param>
-        /// <param name="dni">DNI de la persona</param>
-        /// <param name="nacionalidad">Nacionalidad de la persona</param>
-        public Persona(string nombre, string apellido, string dni, ENacionalidad nacionalidad)
+        public Persona(string nombre, string apellido, ENacionalidad nacionalidad)
         {
             this.Nombre = nombre;
             this.Apellido = apellido;
-            this.nacionalidad = nacionalidad;
+            this.Nacionalidad = nacionalidad;
+        }
+
+        /// <summary>
+        /// Cosntructor que recibe todos los ddatos de la persona
+        /// </summary>
+        /// <param name="nombre">Nombre de la persona</param>
+        /// <param name="apellido">Apellido de la persona</param>
+        /// <param name="dni">DNI de la persona</param>
+        /// <param name="nacionalidad">Nacionalidad de la persona</param>
+        public Persona(string nombre, string apellido, int dni, ENacionalidad nacionalidad) :this(nombre,apellido,nacionalidad)
+        {
+            this.DNI = dni;
+        }
+
+        /// <summary>
+        /// Cosntructor que recibe todos los ddatos de la persona
+        /// </summary>
+        /// <param name="nombre">Nombre de la persona</param>
+        /// <param name="apellido">Apellido de la persona</param>
+        /// <param name="dni">DNI de la persona</param>
+        /// <param name="nacionalidad">Nacionalidad de la persona</param>
+        public Persona(string nombre, string apellido, string dni, ENacionalidad nacionalidad) : this(nombre, apellido, nacionalidad)
+        {
             this.StringToDNI = dni;
         }
         #endregion
@@ -171,7 +172,7 @@ namespace EntidadesAbstractas
         {
             int retorno = 0;
             string mensaje = "DNI invalido";
-            if (!int.TryParse(dato, out int resultado) && dato.Count() < 9)
+            if (int.TryParse(dato, out int resultado) && dato.Count() < 9)
             {
 
                 retorno = ValidarDni(nacionalidad, resultado);

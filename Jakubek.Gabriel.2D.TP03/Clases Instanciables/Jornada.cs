@@ -30,10 +30,9 @@ namespace EntidadesInstanciables
             {
                 foreach (Alumno alumno in value)
                 {
-                    if(alumno == this.clase)
+                    if (alumno == this.clase)
                     {
                         this.alumnos.Add(alumno);
-                        break;
                     }
                 }
             }
@@ -69,7 +68,7 @@ namespace EntidadesInstanciables
                 {
                     this.profesor = value;
                 }
-                
+
             }
         }
         #endregion
