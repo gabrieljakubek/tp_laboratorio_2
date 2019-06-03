@@ -1,9 +1,11 @@
 ﻿using Excepciones;
+using System;
 using System.Linq;
 using System.Text;
 
 namespace EntidadesAbstractas
 {
+    [Serializable]
     public abstract class Persona
     {
         #region Atributos
@@ -202,7 +204,7 @@ namespace EntidadesAbstractas
                     break;
                 }
             }
-            if (chequeo)
+            if (!chequeo)
             {
                 retorno = dato;
             }
@@ -212,15 +214,15 @@ namespace EntidadesAbstractas
 
         #region Sobrecarga
         /// <summary>
-        /// Retorna toda la informacion de la PErsona
+        /// Retorna toda la informacion de la Persona
         /// </summary>
         /// <returns></returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("DNI: " + this.dni);
             sb.AppendLine("Nombre: " + this.nombre);
             sb.AppendLine("Apellido: " + this.apellido);
+            sb.AppendLine("DNI: " + this.dni);
             sb.AppendLine("Nacionalidad: " + this.nacionalidad);
             return sb.ToString();
         }

@@ -1,7 +1,9 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 
 namespace EntidadesAbstractas
 {
+    [Serializable]
     public abstract class Universitario : Persona
     {
         #region Atributos

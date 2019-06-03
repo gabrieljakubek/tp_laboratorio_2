@@ -2,10 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using static EntidadesInstanciables.Universidad;
 
 namespace EntidadesInstanciables
 {
+    [Serializable]
     public sealed class Profesor : Universitario
     {
         #region Atributos
@@ -19,7 +21,7 @@ namespace EntidadesInstanciables
         /// </summary>
         static Profesor()
         {
-            random = new Random(DateTime.Now.Millisecond);
+            random = new Random();
         }
         /// <summary>
         /// Constructor por default
@@ -39,6 +41,7 @@ namespace EntidadesInstanciables
         {
             this.claseDelDia = new Queue<EClases>();
             this.RandomClases();
+            Thread.Sleep(1000);
             this.RandomClases();
         }
         #endregion
@@ -49,7 +52,7 @@ namespace EntidadesInstanciables
         /// </summary>
         private void RandomClases()
         {
-            this.claseDelDia.Enqueue((EClases)random.Next(0,3));
+            this.claseDelDia.Enqueue((EClases)random.Next(0, 3));
         }
 
         /// <summary>
@@ -70,7 +73,13 @@ namespace EntidadesInstanciables
         /// <returns></returns>
         protected override string ParticiparEnClase()
         {
-            StringBuilder sb = new StringBuilder("CLASE DEL DIA " + this.claseDelDia.Dequeue().ToString());
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("CLASES DEL DIA: ");
+            for (int i = 0; i < this.claseDelDia.Count; i++)
+            {
+                sb.AppendLine(this.claseDelDia.Dequeue().ToString());
+                i--;
+            }
             return sb.ToString();
         }
         #endregion

@@ -1,9 +1,11 @@
 ﻿using EntidadesAbstractas;
+using System;
 using System.Text;
 using static EntidadesInstanciables.Universidad;
 
 namespace EntidadesInstanciables
 {
+    [Serializable]
     public sealed class Alumno : Universitario
     {
         #region Atributos
@@ -58,7 +60,7 @@ namespace EntidadesInstanciables
             sb.Append(base.MostrarDatos());
             sb.Append(this.ParticiparEnClase());
             sb.AppendLine("Estado de cuenta: " + estadoCuenta);
-            return base.MostrarDatos();
+            return sb.ToString();
         }
 
         /// <summary>
@@ -67,7 +69,8 @@ namespace EntidadesInstanciables
         /// <returns></returns>
         protected override string ParticiparEnClase()
         {
-            StringBuilder sb = new StringBuilder("TOMA CLASE DE " + this.claseQueToma);
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("TOMA CLASE DE " + this.claseQueToma);
             return sb.ToString();
         }
         #endregion
@@ -101,19 +104,14 @@ namespace EntidadesInstanciables
         }
 
         /// <summary>
-        /// Comprueba qué un alumno no cura una clase en especifico
+        /// Comprueba qué un alumno no cursa una clase en especifico
         /// </summary>
         /// <param name="a">Alumno del que se desea saber cual clase cursa</param>
         /// <param name="clase">Clase en la que se desea saber si cursa el alumno</param>
         /// <returns></returns>
         public static bool operator !=(Alumno a, EClases clase)
         {
-            bool retorno = false;
-            if(a.claseQueToma != clase)
-            {
-                retorno = true;
-            }
-            return retorno;
+            return !(a==clase);
         }
         #endregion
 

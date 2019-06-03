@@ -55,6 +55,7 @@ namespace Main
             EntidadesAbstractas.Persona.ENacionalidad.Argentino, Universidad.EClases.Legislacion,
             Alumno.EEstadoCuenta.AlDia);
             gim += a8;
+
             Profesor i1 = new Profesor(1, "Juan", "Lopez", "12234456",
             EntidadesAbstractas.Persona.ENacionalidad.Argentino);
             gim += i1;
