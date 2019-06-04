@@ -220,10 +220,9 @@ namespace EntidadesAbstractas
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("Nombre: " + this.nombre);
-            sb.AppendLine("Apellido: " + this.apellido);
+            sb.AppendFormat("NOMBRE COMPLETO {0} {1}\r\n",this.nombre,this.apellido);
             sb.AppendLine("DNI: " + this.dni);
-            sb.AppendLine("Nacionalidad: " + this.nacionalidad);
+            sb.AppendLine("NACIONALIDAD: " + this.nacionalidad);
             return sb.ToString();
         }
         #endregion
