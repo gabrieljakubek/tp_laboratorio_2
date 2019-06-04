@@ -98,7 +98,7 @@ namespace EntidadesInstanciables
         {
             bool retorno = false;
             Texto texto = new Texto();
-            if (texto.Guardar(".//Jornada.txt", jornada.ToString()))
+            if (texto.Guardar(Environment.GetFolderPath(Environment.SpecialFolder.Desktop)+"//Jornada.txt", jornada.ToString()))
             {
                 retorno = true;
             }
@@ -112,7 +112,7 @@ namespace EntidadesInstanciables
         public static string Leer()
         {
             Texto texto = new Texto();
-            texto.Leer(".//Jornada.txt", out string dato);
+            texto.Leer(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "//Jornada.txt", out string dato);
             return dato;
         }
         #endregion

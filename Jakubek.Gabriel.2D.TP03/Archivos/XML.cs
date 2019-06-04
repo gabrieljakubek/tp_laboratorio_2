@@ -7,6 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Serialization;
 
 namespace Archivos
 {
@@ -15,12 +16,12 @@ namespace Archivos
         public bool Guardar(string archivo, T datos)
         {
             bool retorno = false;
-            BinaryFormatter binary = new BinaryFormatter();
+            XmlSerializer serializer = new XmlSerializer(typeof(T));
             try
             {
-                using (FileStream stream = new FileStream(archivo, FileMode.Create))
+                using (XmlTextWriter writer = new XmlTextWriter(archivo, Encoding.UTF8))
                 {
-                    binary.Serialize(stream, datos);
+                    serializer.Serialize(writer, datos);
                     retorno = true;
                 }
             }
@@ -29,23 +30,24 @@ namespace Archivos
                 throw new ArchivosException(ex);
             }
 
+
             return retorno;
         }
 
         public bool Leer(string archivo, out T dato)
         {
             bool retorno = false;
-            BinaryFormatter binary = new BinaryFormatter();
+            XmlSerializer serializer = new XmlSerializer(typeof(string));
             try
             {
-                using (FileStream stream = new FileStream(archivo, FileMode.Open))
+                using (XmlTextReader reader = new XmlTextReader(archivo))
                 {
-                    dato = (T)binary.Deserialize(stream);
+                    dato = (T)serializer.Deserialize(reader);
                     retorno = true;
                 }
             }
             catch (Exception ex)
-            { 
+            {
                 throw new ArchivosException(ex);
             }
 

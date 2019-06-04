@@ -15,12 +15,11 @@ namespace Archivos
         public bool Guardar(string archivo, string datos)
         {
             bool retorno = false;
-            XmlSerializer serializer = new XmlSerializer(typeof(string));
             try
             {
-                using (XmlTextWriter writer = new XmlTextWriter(archivo, Encoding.UTF8))
+                using (StreamWriter writer = new StreamWriter(archivo))
                 {
-                    serializer.Serialize(writer, datos);
+                    writer.WriteLine(datos);
                     retorno = true;
                 }
             }
@@ -35,12 +34,11 @@ namespace Archivos
         public bool Leer(string archivo, out string dato)
         {
             bool retorno = false;
-            XmlSerializer serializer = new XmlSerializer(typeof(string));
             try
             {
-                using (XmlTextReader reader = new XmlTextReader(archivo))
+                using (StreamReader reader = new StreamReader(archivo))
                 {
-                    dato = (string)serializer.Deserialize(reader);
+                    dato = reader.ReadToEnd();
                     retorno = true;
                 }
             }

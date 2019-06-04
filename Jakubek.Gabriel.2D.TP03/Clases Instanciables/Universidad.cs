@@ -99,7 +99,7 @@ namespace EntidadesInstanciables
         {
             bool retorno = false;
             XML<Universidad> xml = new XML<Universidad>();
-            if (xml.Guardar(".//Universidad", uni))
+            if (xml.Guardar(Environment.GetFolderPath(Environment.SpecialFolder.Desktop)+"//Universidad.xml", uni))
             {
                 retorno = true;
             }
@@ -113,7 +113,7 @@ namespace EntidadesInstanciables
         public static Universidad Leer()
         {
             XML<Universidad> xml = new XML<Universidad>();
-            xml.Leer(".//Universidad", out Universidad universidad);
+            xml.Leer(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "//Universidad.xml", out Universidad universidad);
             return universidad;
         }
         #endregion
