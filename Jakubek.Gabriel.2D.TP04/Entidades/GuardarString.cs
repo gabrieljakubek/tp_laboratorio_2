@@ -19,7 +19,7 @@ namespace Entidades
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\" + arcrivo + ".txt"))
+                using (StreamWriter sw = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\" + arcrivo,true))
                 {
                     sw.WriteLine(texto);
                     return true;

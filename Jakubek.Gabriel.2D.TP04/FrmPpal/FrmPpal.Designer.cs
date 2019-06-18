@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblEstadoEntregado = new System.Windows.Forms.Label();
+            this.lblEstadoEnViaje = new System.Windows.Forms.Label();
             this.lstEstadoEnViaje = new System.Windows.Forms.ListBox();
             this.lstEstadoEntregado = new System.Windows.Forms.ListBox();
             this.lstEstadoIngresado = new System.Windows.Forms.ListBox();
@@ -41,8 +43,6 @@
             this.lblDireccion = new System.Windows.Forms.Label();
             this.mtxtTrackingID = new System.Windows.Forms.MaskedTextBox();
             this.rtbMostrar = new System.Windows.Forms.RichTextBox();
-            this.lblEstadoEnViaje = new System.Windows.Forms.Label();
-            this.lblEstadoEntregado = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -57,25 +57,43 @@
             this.groupBox1.Controls.Add(this.lblIngresado);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(499, 239);
+            this.groupBox1.Size = new System.Drawing.Size(509, 239);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Estados Paquetes";
             // 
+            // lblEstadoEntregado
+            // 
+            this.lblEstadoEntregado.AutoSize = true;
+            this.lblEstadoEntregado.Location = new System.Drawing.Point(340, 16);
+            this.lblEstadoEntregado.Name = "lblEstadoEntregado";
+            this.lblEstadoEntregado.Size = new System.Drawing.Size(56, 13);
+            this.lblEstadoEntregado.TabIndex = 13;
+            this.lblEstadoEntregado.Text = "Entregado";
+            // 
+            // lblEstadoEnViaje
+            // 
+            this.lblEstadoEnViaje.AutoSize = true;
+            this.lblEstadoEnViaje.Location = new System.Drawing.Point(173, 16);
+            this.lblEstadoEnViaje.Name = "lblEstadoEnViaje";
+            this.lblEstadoEnViaje.Size = new System.Drawing.Size(46, 13);
+            this.lblEstadoEnViaje.TabIndex = 12;
+            this.lblEstadoEnViaje.Text = "En Viaje";
+            // 
             // lstEstadoEnViaje
             // 
             this.lstEstadoEnViaje.FormattingEnabled = true;
-            this.lstEstadoEnViaje.Location = new System.Drawing.Point(168, 32);
+            this.lstEstadoEnViaje.Location = new System.Drawing.Point(343, 32);
             this.lstEstadoEnViaje.Name = "lstEstadoEnViaje";
-            this.lstEstadoEnViaje.Size = new System.Drawing.Size(153, 199);
+            this.lstEstadoEnViaje.Size = new System.Drawing.Size(161, 199);
             this.lstEstadoEnViaje.TabIndex = 11;
             // 
             // lstEstadoEntregado
             // 
             this.lstEstadoEntregado.FormattingEnabled = true;
-            this.lstEstadoEntregado.Location = new System.Drawing.Point(327, 34);
+            this.lstEstadoEntregado.Location = new System.Drawing.Point(176, 32);
             this.lstEstadoEntregado.Name = "lstEstadoEntregado";
-            this.lstEstadoEntregado.Size = new System.Drawing.Size(153, 199);
+            this.lstEstadoEntregado.Size = new System.Drawing.Size(161, 199);
             this.lstEstadoEntregado.TabIndex = 10;
             // 
             // lstEstadoIngresado
@@ -83,7 +101,7 @@
             this.lstEstadoIngresado.FormattingEnabled = true;
             this.lstEstadoIngresado.Location = new System.Drawing.Point(9, 32);
             this.lstEstadoIngresado.Name = "lstEstadoIngresado";
-            this.lstEstadoIngresado.Size = new System.Drawing.Size(153, 199);
+            this.lstEstadoIngresado.Size = new System.Drawing.Size(161, 199);
             this.lstEstadoIngresado.TabIndex = 9;
             // 
             // lblIngresado
@@ -103,7 +121,7 @@
             this.groupBox2.Controls.Add(this.txtDireccion);
             this.groupBox2.Controls.Add(this.lblDireccion);
             this.groupBox2.Controls.Add(this.mtxtTrackingID);
-            this.groupBox2.Location = new System.Drawing.Point(291, 257);
+            this.groupBox2.Location = new System.Drawing.Point(301, 257);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(220, 107);
             this.groupBox2.TabIndex = 0;
@@ -168,33 +186,15 @@
             this.rtbMostrar.Location = new System.Drawing.Point(12, 257);
             this.rtbMostrar.Name = "rtbMostrar";
             this.rtbMostrar.ReadOnly = true;
-            this.rtbMostrar.Size = new System.Drawing.Size(273, 107);
+            this.rtbMostrar.Size = new System.Drawing.Size(283, 107);
             this.rtbMostrar.TabIndex = 5;
             this.rtbMostrar.Text = "";
-            // 
-            // lblEstadoEnViaje
-            // 
-            this.lblEstadoEnViaje.AutoSize = true;
-            this.lblEstadoEnViaje.Location = new System.Drawing.Point(165, 16);
-            this.lblEstadoEnViaje.Name = "lblEstadoEnViaje";
-            this.lblEstadoEnViaje.Size = new System.Drawing.Size(46, 13);
-            this.lblEstadoEnViaje.TabIndex = 12;
-            this.lblEstadoEnViaje.Text = "En Viaje";
-            // 
-            // lblEstadoEntregado
-            // 
-            this.lblEstadoEntregado.AutoSize = true;
-            this.lblEstadoEntregado.Location = new System.Drawing.Point(327, 16);
-            this.lblEstadoEntregado.Name = "lblEstadoEntregado";
-            this.lblEstadoEntregado.Size = new System.Drawing.Size(56, 13);
-            this.lblEstadoEntregado.TabIndex = 13;
-            this.lblEstadoEntregado.Text = "Entregado";
             // 
             // FrmPpal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 373);
+            this.ClientSize = new System.Drawing.Size(529, 373);
             this.Controls.Add(this.rtbMostrar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
