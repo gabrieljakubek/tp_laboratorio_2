@@ -98,7 +98,7 @@ namespace EntidadesInstanciables
         {
             bool retorno = false;
             Texto texto = new Texto();
-            if (texto.Guardar(Environment.GetFolderPath(Environment.SpecialFolder.Desktop)+"//Jornada.txt", jornada.ToString()))
+            if (texto.Guardar(".//Jornada.txt", jornada.ToString()))
             {
                 retorno = true;
             }
@@ -112,7 +112,7 @@ namespace EntidadesInstanciables
         public static string Leer()
         {
             Texto texto = new Texto();
-            texto.Leer(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "//Jornada.txt", out string dato);
+            texto.Leer(".//Jornada.txt", out string dato);
             return dato;
         }
         #endregion
@@ -125,15 +125,15 @@ namespace EntidadesInstanciables
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("Clase de: " + this.Clase);
-            sb.AppendLine("Instructor: ");
-            sb.AppendLine(this.Instructor.ToString());
-            sb.AppendLine("Alumnos: ");
+            sb.AppendLine("JORNADA:");
+            sb.AppendFormat("CLASE DE {0} POR {1}",this.Clase, this.Instructor.ToString());
+            
+            sb.AppendLine("ALUMNOS:\r\n");
             foreach (Alumno alumno in this.Alumnos)
             {
                 sb.AppendLine(alumno.ToString());
             }
-            sb.AppendLine("<-------------------------------->");
+            sb.AppendLine("<-------------------------------->\r\n");
             return sb.ToString();
         }
         #endregion

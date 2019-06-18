@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,11 +16,11 @@ namespace Excepciones
         { }
         public DniInvalidoException(Exception e) : this("DNI invalido", e)
         { }
-        public DniInvalidoException(string mensaje) : this(mensaje, null)
+        public DniInvalidoException(string messege) : this(messege, null)
         { }
-        public DniInvalidoException(string mensaje, Exception e) : base(mensaje, e)
+        public DniInvalidoException(string messege, Exception e) : base(messege, e)
         {
-            this.mensajeBase = mensaje;
+            this.mensajeBase = messege;
         }
     }
 }

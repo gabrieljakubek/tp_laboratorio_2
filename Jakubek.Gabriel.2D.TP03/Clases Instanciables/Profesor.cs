@@ -74,12 +74,13 @@ namespace EntidadesInstanciables
         protected override string ParticiparEnClase()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("CLASES DEL DIA: ");
+            sb.AppendLine("CLASES DEL DÍA: ");
             for (int i = 0; i < this.claseDelDia.Count; i++)
             {
                 sb.AppendLine(this.claseDelDia.Dequeue().ToString());
                 i--;
             }
+            sb.AppendLine();
             return sb.ToString();
         }
         #endregion
