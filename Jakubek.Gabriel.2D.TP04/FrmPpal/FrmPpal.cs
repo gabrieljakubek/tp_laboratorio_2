@@ -14,12 +14,18 @@ namespace FrmPpal
     public partial class FrmPpal : Form
     {
         Correo correo;
+
         public FrmPpal()
         {
-            InitializeComponent();
-            correo = new Correo();
+            this.InitializeComponent();
+            this.correo = new Correo();
         }
 
+        /// <summary>
+        /// Agrega un paquete a el correo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             Paquete paquete = new Paquete(txtDireccion.Text, mtxtTrackingID.Text);
@@ -27,12 +33,16 @@ namespace FrmPpal
             try
             {
                 this.correo += paquete;
-                ActualizarEstados();
             }
-            catch(TrackingIdRepetidoException ex)
+            catch (TrackingIdRepetidoException ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            this.ActualizarEstados();
         }
 
         private void btnMostrarTodos_Click(object sender, EventArgs e)
@@ -40,6 +50,11 @@ namespace FrmPpal
             this.MostrarInformacion<List<Paquete>>((IMostrar<List<Paquete>>)this.correo);
         }
 
+        /// <summary>
+        /// Muestra la informacion del elemento que se le pasa
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="elemento"></param>
         private void MostrarInformacion<T>(IMostrar<T> elemento)
         {
             if (!correo.Equals(null))
@@ -49,6 +64,9 @@ namespace FrmPpal
             }
         }
 
+        /// <summary>
+        /// Actualiza el estado de cada uno de los paquetes
+        /// </summary>
         private void ActualizarEstados()
         {
             lstEstadoIngresado.Items.Clear();
@@ -59,18 +77,23 @@ namespace FrmPpal
                 switch (paquete.Estado)
                 {
                     case Paquete.EEstado.Ingresado:
-                        lstEstadoIngresado.Items.Add(paquete);
+                        this.lstEstadoIngresado.Items.Add(paquete);
                         break;
                     case Paquete.EEstado.EnViaje:
-                        lstEstadoEnViaje.Items.Add(paquete);
+                        this.lstEstadoEnViaje.Items.Add(paquete);
                         break;
                     case Paquete.EEstado.Entregado:
-                        lstEstadoEntregado.Items.Add(paquete);
+                        this.lstEstadoEntregado.Items.Add(paquete);
                         break;
                 }
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void paq_InformaEstado(object sender, EventArgs e)
         {
             if (this.InvokeRequired)
@@ -83,11 +106,25 @@ namespace FrmPpal
                 this.ActualizarEstados();
             }
         }
+
+        /// <summary>
+        /// Chequea si hay hilos vivos, de ser así los termina
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmPpal_FormClosing(object sender, FormClosingEventArgs e)
         {
             correo.FinEntregas();
         }
 
-
+        /// <summary>
+        /// Muestra el paquete seleccionado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void mostrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.MostrarInformacion<Paquete>((IMostrar<Paquete>)lstEstadoEntregado.SelectedItem);
+        }
     }
 }

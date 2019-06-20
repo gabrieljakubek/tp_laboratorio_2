@@ -88,7 +88,7 @@ namespace Entidades
             {
                 Thread.Sleep(4000);
                 this.estado++;
-                this.InformarEstado((object)this, new EventArgs());
+                this.InformarEstado.Invoke(this, new EventArgs());
             }
             try
             {

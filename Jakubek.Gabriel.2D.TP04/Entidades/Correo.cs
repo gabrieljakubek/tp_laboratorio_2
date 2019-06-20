@@ -76,18 +76,27 @@ namespace Entidades
         public static Correo operator +(Correo c, Paquete p)
         {
             Thread hilo;
-            foreach (Paquete paquete in c.paquetes)
+            try
             {
-                if (paquete == p)
+                foreach (Paquete paquete in c.paquetes)
                 {
-                    throw new TrackingIdRepetidoException("El TrackID " + p.TrackingID + " ya se encuentra ingresado en el sistema");
+                    if (paquete == p)
+                    {
+                        throw new TrackingIdRepetidoException("El TrackID " + p.TrackingID + " ya se encuentra ingresado en el sistema");
+                    }
                 }
+                c.paquetes.Add(p);
+                hilo = new Thread(p.MockCicloDeVida);
+                hilo.Start();
+                c.mockPaquetes.Add(hilo);
+                return c;
             }
-            c.paquetes.Add(p);
-            hilo = new Thread(p.MockCicloDeVida);
-            hilo.Start();
-            c.mockPaquetes.Add(hilo);
-            return c;
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            
         }
         #endregion
     }

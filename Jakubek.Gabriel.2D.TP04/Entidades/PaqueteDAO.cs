@@ -43,6 +43,7 @@ namespace Entidades
             }
             catch (Exception ex)
             {
+                conexion.Close();
                 throw ex;
             }
             finally
