@@ -29,7 +29,8 @@ namespace FrmPpal
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             Paquete paquete = new Paquete(txtDireccion.Text, mtxtTrackingID.Text);
-            paquete.InformarEstado += new Paquete.DelegadoEstado(this.paq_InformaEstado);
+            paquete.InformarEstado += this.paq_InformaEstado;
+            paquete.ErrorConeccion += mostrarError;
             try
             {
                 this.correo += paquete;
@@ -98,7 +99,7 @@ namespace FrmPpal
         {
             if (this.InvokeRequired)
             {
-                Paquete.DelegadoEstado d = new Paquete.DelegadoEstado(paq_InformaEstado);
+                DelegadoEstado d = new DelegadoEstado(paq_InformaEstado);
                 this.Invoke(d, new object[] { sender, e });
             }
             else
@@ -125,6 +126,15 @@ namespace FrmPpal
         private void mostrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.MostrarInformacion<Paquete>((IMostrar<Paquete>)lstEstadoEntregado.SelectedItem);
+        }
+
+        /// <summary>
+        /// Metodo encargado de mostrar a travez de messagebox los mensajes de error que se le pasan
+        /// </summary>
+        /// <param name="mensaje">Error qué se desea informar</param>
+        private void mostrarError(string mensaje)
+        {
+            MessageBox.Show(mensaje);
         }
     }
 }

@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
+    public delegate void DelegadoEstado(object sender, EventArgs e);
+    public delegate void DelegadoError(string mensaje);
     public class Paquete : IMostrar<Paquete>
     {
-        public delegate void DelegadoEstado(object sender, EventArgs e);
         public event DelegadoEstado InformarEstado;
+        public event DelegadoError ErrorConeccion;
         public enum EEstado
         {
             Ingresado,
@@ -96,7 +98,7 @@ namespace Entidades
             }
             catch (Exception ex)
             {
-                throw ex;
+                this.ErrorConeccion("Error de conección a la base de datos!!");
             }
         }
         #endregion
@@ -108,7 +110,7 @@ namespace Entidades
         /// <returns></returns>
         public override string ToString()
         {
-            return this.MostrarDatos((IMostrar<Paquete>)this); 
+            return this.MostrarDatos((IMostrar<Paquete>)this);
         }
         #endregion
 
@@ -135,7 +137,7 @@ namespace Entidades
         /// <param name="p1">Primer paquetre a comparar</param>
         /// <param name="p2">Segundo paquete a comparar</param>
         /// <returns>Retorna ture si el TrackID no es el mismo de lo contrario false</returns>
-        public static bool operator!=(Paquete p1, Paquete p2)
+        public static bool operator !=(Paquete p1, Paquete p2)
         {
             return !(p1 == p2);
         }
